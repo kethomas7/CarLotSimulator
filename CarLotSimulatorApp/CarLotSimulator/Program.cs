@@ -8,28 +8,15 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
-            //TODO
-
-            //Create a seperate class file called Car-DONE
-
-
-            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable- DONE
-
-            //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()-DONE
-
-
-            //The methods should take one string parameter: the respective noise property -DONE
-
-
-
-            //Now that the Car class is created we can instanciate 3 new cars- DONE
-            //Set the properties for each of the cars-DONE
+            
 
             CarLot davesCarlot = new CarLot();
 
             Car cydCar = new Car(2020,"Audi", "A3", "too loud", "level 2", true);
 
             davesCarlot.CarList.Add(cydCar);
+
+            Console.WriteLine($"Current number of cars in the carlot: {CarLot.numberOfCars}");
 
             Car blakeCar = new Car()
             {
@@ -42,7 +29,9 @@ namespace CarLotSimulator
             };
 
             davesCarlot.CarList.Add(blakeCar);
-          
+            Console.WriteLine($"Current number of cars in the carlot: {CarLot.numberOfCars}");
+
+
             Car kateCar = new Car();
             kateCar.Year = 2019;
             kateCar.Make = "Lexus";
@@ -52,7 +41,7 @@ namespace CarLotSimulator
             kateCar.IsDriveable = false;
 
             davesCarlot.CarList.Add(kateCar);
-            //Call each of the methods for each car -DONE
+            Console.WriteLine($"Current number of cars in the carlot: {CarLot.numberOfCars}");
 
             cydCar.MakeEngineNoise(cydCar.EngineNoise);
             cydCar.MakeHonkNoise(cydCar.HonkNoise);
@@ -70,6 +59,18 @@ namespace CarLotSimulator
                 Console.WriteLine($"Year: {car.Year} Make: {car.Model} Model: {car.Make}");
             }
 
+
+
+
+            //TODO
+
+            //Create a seperate class file called Car-DONE
+            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable- DONE
+            //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()-DONE
+            //The methods should take one string parameter: the respective noise property -DONE
+            //Now that the Car class is created we can instanciate 3 new cars- DONE
+            //Set the properties for each of the cars-DONE
+            
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car  -DONE
